@@ -1,2 +1,2 @@
 build:
-	docker build . -t mercureimaging/fseseriesmodule:latest
+	docker build . -t mercureimaging/fseseriesmodule:v2
