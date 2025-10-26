@@ -1,4 +1,4 @@
-# mercure-testmodule
+# mercure-seriesmodule
 Example module demonstrating a simple image-processing algorithm
 
 ## Purpose
@@ -11,7 +11,7 @@ This module demonstrates how a simple image-processing algorithm can be integrat
 
 The module can be installed on a mercure server using the Modules page of the mercure web interface. Enter the following line into the "Docker tag" field. mercure will automatically download and install the module:
 ```
-mercureimaging/mercure-testmodule
+mercureimaging/fseseriesmodule
 ```
 
 The following parameters can be set (via the Modules or Rules page):
@@ -22,4 +22,4 @@ series_offset: Offset added to series number (default: 1000)
 
 ## Modification
 
-To use the module as template for integrating own algorithms, clone the Git repository into your development environment. Edit the Makefile and replace the tag "mercureimaging/mercure-testmodule" with a tag of your choice (use the name of your own organization in place of "mercureimaging", which will allow you to publish the container image on Docker Hub later). Afterwards, you can build the Docker container locally by calling the "make" command, and you can test the container in mercure by installing the module on the Modules page using the changed tag name. Source code modifications need to be done in the file testmodule.py. If you rename this file, make sure to adapt also the file docker-entrypoint.sh, which is the entry function called by mercure. If you use additional Python libraries, add these libraries to the file requirements.txt to ensure that they get installed when building the container image.
+To use the module as template for integrating own algorithms, clone the Git repository into your development environment. Edit the Makefile and replace the tag "mercureimaging/fseseriesmodule" with a tag of your choice (use the name of your own organization in place of "mercureimaging", which will allow you to publish the container image on Docker Hub later). Afterwards, you can build the Docker container locally by calling the "make" command, and you can test the container in mercure by installing the module on the Modules page using the changed tag name. Source code modifications need to be done in the file testmodule.py. If you rename this file, make sure to adapt also the file docker-entrypoint.sh, which is the entry function called by mercure. If you use additional Python libraries, add these libraries to the file requirements.txt to ensure that they get installed when building the container image.
